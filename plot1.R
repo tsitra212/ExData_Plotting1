@@ -10,5 +10,5 @@ data <- energy[energy$Date == "1/2/2007" | energy$Date == "2/2/2007" ,]
 data[,3] <- as.numeric(data[,3])
 hist(data[,3], col ="red", breaks = 12, xlab="Global Active Power (kilowatts)", main= "Global Active Power", xaxt = 'n')
 axis(1,c(0,2,4,6))
-dev.copy(png, file ="plot1.png")
+dev.copy(png, file ="plot1.png", width=480, height=480)
 dev.off()

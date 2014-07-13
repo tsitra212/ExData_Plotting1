@@ -15,5 +15,5 @@ axis(1, labels=c("Thu","Fri","Sat"), at=c(0,1440,2880), cex.lab=0.8, cex.axis=0.
 lines(data[,8], col="red")
 lines(data[,9], col="blue")
 legend("topright", names(data)[7:9], col=c('black', 'red', 'blue'), lty=1, cex=0.8)
-dev.copy(png, file ="plot3.png")
+dev.copy(png, file ="plot3.png", width=480, height=480)
 dev.off()
