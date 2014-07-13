@@ -8,7 +8,7 @@
 energy <- read.table("../household_power_consumption.txt", sep=";", header = TRUE, stringsAsFactors = FALSE)
 data <- energy[energy$Date == "1/2/2007" | energy$Date == "2/2/2007" ,]
 data[,3] <- as.numeric(data[,3])
-plot(data[,3], type="l", xaxt='n', ylab="Global Active Power (kilowatts)", xlab="")
-axis(1, labels=c("Thu","Fri","Sat"), at=c(0,1440,2880))
+plot(data[,3], type="l", xaxt='n', ylab="Global Active Power (kilowatts)", xlab="", cex.lab=0.8, cex.axis=0.8)
+axis(1, labels=c("Thu","Fri","Sat"), at=c(0,1440,2880), cex.axis=0.8)
 dev.copy(png, file ="plot2.png", width=480, height=480)
 dev.off()
